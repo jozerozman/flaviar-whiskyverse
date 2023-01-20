@@ -1,0 +1,304 @@
+//*******************************************************************************
+// 1.0 - GENERAL
+//*******************************************************************************
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Text selection styling
+::selection {
+	color: var(--flaviar-black-black-900);
+	background-color: var(--flaviar-grey-grey-300);
+}
+
+// Modal window - prevent scrolling
+body {
+	@extend %page_text;
+	color: var(--color-white);
+	background-color: var(--color-black);
+	background: url('../assets/images/bg_elements/00_bck_desktop_static.webp') no-repeat top center / cover;
+	background-attachment: fixed;
+	position: relative;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: flex-start;
+	font-family: Nitti;
+	margin: 0 auto;
+	min-width: 320px;
+	overflow-x: hidden;
+
+	padding-bottom: 235px;
+
+	// &.#{$class_open_menu},
+	// &.noscroll {
+	//   overflow: hidden;
+
+	//   // Tablet L and up
+	//   @media #{$breakpoint-md-up} {
+	//     overflow: auto;
+	//   }
+	// }
+}
+
+main {
+	width: 100%;
+	flex: 1 0 auto;
+}
+
+// Prevents text selection styling
+.noselect,
+.noselect * {
+	user-select: none;
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+//*******************************************************************************
+// 2.0 - GENERAL : Text styles
+//*******************************************************************************
+
+// Everything inside will inherit text style from parent
+.text,
+.title,
+.title-main {
+	* {
+		@extend %inherit_textstyles;
+	}
+}
+
+// Paragraphs
+p {
+	margin: 0;
+}
+
+// Links
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+// Italic text
+i,
+em {
+	font-style: italic;
+}
+
+// Headings
+@for $i from 1 through 6 {
+	/* stylelint-disable-next-line */
+	h#{$i} {
+		font-weight: inherit;
+		font-size: inherit;
+		margin: 0;
+	}
+}
+
+//*******************************************************************************
+// 3.0 - GENERAL : Images
+//*******************************************************************************
+
+// General image
+img {
+	margin: 0;
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	object-fit: cover;
+}
+
+// Figure (nested image for caption)
+figure {
+	img {
+		margin: 0;
+	}
+}
+
+// Figure caption (caption for nested image)
+figcaption,
+.wp-caption {
+	color: var(--color-black);
+	font-size: 12px;
+	padding-top: 12px;
+	line-height: 1.2;
+}
+
+//*******************************************************************************
+// 4.0 - GENERAL : Section
+//*******************************************************************************
+
+.sc-general {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+//*******************************************************************************
+// 5.0 - GENERAL : Wcag
+//*******************************************************************************
+
+.sr-only {
+	@extend %sr_only;
+}
+
+// General focus style
+:focus {
+	outline: none;
+}
+
+a,
+button,
+input,
+textarea,
+.btn {
+	outline-offset: 6px;
+
+	&:focus-visible {
+		@extend %focus_style;
+	}
+}
+
+// ##################################################
+// BG elements
+// ##################################################
+
+.bg-elems {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 0;
+
+	// ##################################################
+
+	&--top {
+		top: 60px;
+	}
+
+	// ##################################################
+
+	&--bottom {
+		bottom: -34px;
+	}
+}
+
+// ##################################################
+
+.bg-mistletoe {
+	position: absolute;
+	height: auto;
+	right: 14.5%;
+	top: 1036px;
+	width: 254px;
+}
+
+.bg-astronaut {
+	position: absolute;
+	height: auto;
+	right: 23.2%;
+	top: 1368px;
+	width: 238px;
+
+	will-change: transform, opacity;
+	opacity: 0;
+
+	&.is-animated {
+		animation: falling 5s 0s 1;
+		opacity: 1;
+	}
+}
+
+.bg-redplanet {
+	animation: moon-rotate 180s linear infinite;
+	position: absolute;
+	height: auto;
+	left: -3%;
+	top: 1200px;
+	width: 521px;
+	will-change: transform;
+}
+
+.bg-moon {
+	animation: moon-rotate 360s linear infinite;
+	position: absolute;
+	height: auto;
+	right: 0;
+	top: 1858px;
+	width: 772px;
+	will-change: transform;
+}
+
+.bg-nose {
+	position: absolute;
+	height: auto;
+	left: 18.4%;
+	top: 1923px;
+	width: 79px;
+}
+
+.bg-star {
+	position: absolute;
+	height: auto;
+	right: 35.4%;
+	width: 128px;
+	top: 2308px;
+}
+
+.bg-square {
+	position: absolute;
+	height: auto;
+	top: 2924px;
+	left: 14.5%;
+	width: 36px;
+}
+
+// ##################################################
+
+.btn {
+	border-radius: 2px;
+	position: relative;
+	height: 56px;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
+
+	// ##################################################
+
+	&:before {
+		@extend %content;
+		background-color: #4fc061;
+		-webkit-filter: blur(4px);
+		filter: blur(4px);
+		z-index: 0;
+	}
+
+	// ##################################################
+
+	span {
+		color: var(--flaviar-black-black-900);
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+	}
+}

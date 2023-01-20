@@ -1,0 +1,23 @@
+{% set slideItems = 12 %}
+{% set slideDuplicates = 3 %}
+{% set slideSize = '220px' %}
+
+<section class="sc-general : sc-slider">
+  <div class="sc-wrapper">
+
+    <div class="slider" style=" --slide-items: {{ slideItems }}; --slide-duplicates: {{ slideDuplicates }}; --slide-width: {{ slideSize }};">
+      <div class="slider__track">
+
+        {% for i in 1..slideDuplicates %}
+          {% for i in 1..slideItems %}
+          <div class="slider__slide">
+            <img src="../../assets/images/feed/feed_{{ '%02d'|format(i) }}.webp" alt="Slider image" height="{{ slideSize }}" width="{{ slideSize }}" />
+          </div>
+          {% endfor %}
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+</section>

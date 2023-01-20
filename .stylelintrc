@@ -1,0 +1,38 @@
+{
+	"plugins": ["@namics/stylelint-bem"],
+	"rules": {
+		"linebreaks": "unix",
+		"at-rule-empty-line-before": null,
+		"at-rule-no-unknown": null,
+		"indentation": "tab",
+		"rule-empty-line-before": [
+			"always-multi-line",
+			{
+				"ignore": ["after-comment", "first-nested", "inside-block"]
+			}
+		],
+		"max-empty-lines": [
+			3,
+			{
+				"ignore": ["comments"]
+			}
+		],
+		"selector-pseudo-element-colon-notation": null,
+		"block-closing-brace-empty-line-before": null,
+		"no-descending-specificity": null,
+		"declaration-empty-line-before": null,
+		"selector-combinator-space-before": null,
+		"block-closing-brace-newline-after": null,
+		"scss/at-rule-no-unknown": true,
+		"comment-no-empty": null,
+		"scss/comment-no-empty": null,
+		"scss/operator-no-unspaced": null,
+		"scss/no-global-function-names": null,
+		"scss/function-quote-no-quoted-strings-inside": null,
+		"plugin/stylelint-bem-namics": {
+			"patternPrefixes": [],
+			"helperPrefixes": []
+		}
+	},
+	"extends": ["stylelint-config-recommended-scss"]
+}

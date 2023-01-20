@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="site-logo">
+    <img src="../../assets/images/flaviar-logo.svg" alt="Flaviar" class="site-logo__img" height="150" width="291" />
+  </div>
+  <nav class="site-menu">
+    <ul>
+        {% for item in menu %}
+          <li><a href="{{ item.href }}" class="site-menu__link">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+  </nav>
+</header>

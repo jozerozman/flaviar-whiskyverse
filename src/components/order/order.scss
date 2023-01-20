@@ -1,0 +1,199 @@
+.sc-order {
+	padding-top: 92px;
+
+	.sc-wrapper {
+		padding-left: 68px;
+	}
+}
+
+// ##################################################
+
+.order {
+	&__top {
+		margin-bottom: 32px;
+		padding-left: 10px;
+	}
+
+	// ##################################################
+
+	&__content {
+		display: flex;
+		// align-items: center;
+		gap: 0 24px;
+	}
+
+	// ##################################################
+
+	&__left {
+		padding-top: 42px;
+	}
+
+	&__right {
+	}
+
+	// ##################################################
+
+	&__gfx {
+		top: 16px;
+		left: 28px;
+		position: relative;
+		max-width: 584px;
+		width: 100%;
+	}
+}
+
+// ##################################################
+
+.card {
+	color: var(--color-white);
+	background: var(--flaviar-black-black-900);
+	border-radius: 2px;
+	padding: 10px;
+	display: inline-flex;
+	flex-flow: column;
+	position: relative;
+
+	// ##################################################
+
+	&__content {
+		border: 2px solid var(--flaviar-copper-copper-900);
+		padding: 46px 38px 30px 34px;
+
+		&:before {
+			@extend %content;
+			background: url('../assets/images/order/05_card_pattern.svg') no-repeat scroll center / contain;
+			height: auto;
+			width: calc(100% - 40px);
+			aspect-ratio: 1 / 1;
+			left: 20px;
+			top: 46px;
+			transform-origin: center;
+			transform: rotate(14.5deg);
+		}
+	}
+
+	&__ribbon {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 90px;
+		z-index: 2;
+	}
+
+	// ##################################################
+
+	&__title {
+		color: var(--flaviar-grey-grey-300);
+		font-size: 21px;
+		font-weight: 700;
+		line-height: 21px;
+		text-transform: uppercase;
+		margin-bottom: 22px;
+	}
+
+	// ##################################################
+
+	&__main {
+	}
+
+	// ##################################################
+
+	&__list {
+		display: flex;
+		flex-flow: column;
+		gap: 20px 0;
+		max-width: 300px;
+		margin-bottom: 30px;
+	}
+
+	&__listitem {
+		color: var(--flaviar-grey-grey-500);
+		font-size: 18px;
+		line-height: 1;
+		position: relative;
+		padding-left: 20px;
+
+		&:before {
+			@extend %content;
+			background: url() no-repeat scroll left center / contain;
+			width: 15px;
+			height: 15px;
+			top: 0.1em;
+		}
+
+		&--green:before {
+			background-image: url('../assets/images/order/05_icon_green.svg');
+		}
+		&--yellow:before {
+			background-image: url('../assets/images/order/05_icon_yellow.svg');
+		}
+		&--red:before {
+			background-image: url('../assets/images/order/05_icon_red.svg');
+		}
+		&--blue:before {
+			background-image: url('../assets/images/order/05_icon_blue.svg');
+		}
+	}
+
+	// ##################################################
+
+	&__bottom {
+		position: relative;
+		padding-top: 26px;
+
+		&:before {
+			@extend %content;
+			border-top: 1px dashed #af705e;
+			top: 1px;
+			left: -15px;
+			width: calc(100% + 40px);
+		}
+	}
+
+	// ##################################################
+
+	&__price {
+		color: var(--flaviar-grey-grey-300);
+		font-size: 28px;
+		line-height: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0 50px;
+		height: 46px;
+		position: relative;
+		margin-bottom: 32px;
+
+		&:after {
+			@extend %content;
+			background-color: var(--flaviar-copper-copper-900);
+			left: 50%;
+			width: 1px;
+			margin-left: -2px;
+			top: 1px;
+		}
+
+		&--new {
+			font-weight: 700;
+			position: relative;
+			left: -5px;
+		}
+		&--old {
+			position: relative;
+			&::before {
+				@extend %content;
+				background: url('../assets/images/order/05_line_red.svg') no-repeat scroll center / 82px auto;
+				top: -5px;
+				left: -6px;
+				width: 82px;
+				height: 40px;
+			}
+		}
+	}
+
+	// ##################################################
+
+	&__button {
+	}
+}

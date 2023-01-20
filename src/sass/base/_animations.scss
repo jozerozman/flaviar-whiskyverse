@@ -1,0 +1,56 @@
+// ##################################################
+// Falling animation (for astronaut)
+// ##################################################
+
+@keyframes falling {
+	from {
+		transform: translate3d(-300px, -700px, 0) rotate3d(0, 0, 1, 90deg);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		opacity: 1;
+	}
+}
+
+// ##################################################
+// Floating animation ( advent calendar box )
+// ##################################################
+@keyframes float {
+	0% {
+		transform: translate3d(0, 0px, 0);
+	}
+	50% {
+		transform: translate3d(0, -20px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0px, 0);
+	}
+}
+
+// ##################################################
+// CTA arrows animation
+// ##################################################
+@keyframes cta-arrow {
+	0% {
+		transform: translate3d(0, 0px, 0);
+	}
+	50% {
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		transform: translate3d(0, 0px, 0);
+	}
+}
+
+// ##################################################
+// Rotate moon animation
+// ##################################################
+@keyframes moon-rotate {
+	from {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}

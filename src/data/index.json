@@ -1,0 +1,53 @@
+{
+	"cta": {
+		"href": "#order",
+		"text": "Preorder now",
+		"alt": "Cta arrow"
+	},
+	"menu": [
+		{
+			"href": "#order",
+			"name": "About us"
+		},
+		{
+			"href": "#order",
+			"name": "Log in"
+		}
+	],
+	"intro": {
+		"title": "Explore the Whiskyverse",
+		"gfx_image_alt": "Whiskies of the Galaxy",
+		"text": "PRE-ORDER-NOW!",
+		"icons_alt": "Icons",
+		"text2": "It's now a Flaviar tradition to celebrate X-Mas in July by bringing you the best dram Christmas present. Be a Santa in a bikini and preorder the delicious 24-vial Advent Calendar now to avoid the hostile gift-shopping crowds when Noel comes. Also, save some dinero!"
+	},
+	"calendar": {
+		"title": "Around the Whiskyverse in 24 days",
+		"text": "Embark on an interstellar Christmas Odyssey through the Whiskyverse and go where your tastebuds haven't been before with the Flaviar Advent Calendar. Each day of Advent will take you to another Whisky planet, and you might find a new favorite world of flavors.<br><br>Twenty-four small steps for your palate, one giant leap for your Spirits-tasting journey."
+	},
+	"order": {
+		"title": "Preorder now and save!",
+		"card_title": "Whiskey Advent Calendar",
+		"card_list": [
+			{
+				"class": "green",
+				"text": "24 Spirits samples"
+			},
+			{
+				"class": "yellow",
+				"text": "Gleincairn Glass"
+			},
+			{
+				"class": "red",
+				"text": "Flaviar Coaster"
+			},
+			{
+				"class": "blue",
+				"text": "Tasting notes booklet"
+			}
+		],
+		"card_price_old": "$200",
+		"card_price_new": "$250",
+		"gfx_image_alt": "Whiskies of the Galaxy"
+	}
+}

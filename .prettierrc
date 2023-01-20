@@ -1,0 +1,39 @@
+{
+	"useTabs": true,
+	"printWidth": 120,
+	"tabWidth": 4,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"endOfLine": "lf",
+	"plugins": ["./node_modules/prettier-plugin-twig-melody"],
+	"twigMelodyPlugins": ["./node_modules/prettier-plugin-twig-enhancements"],
+	"overrides": [
+		{
+			"files": ["**/*.twig"],
+			"options": {
+				"singleAttributePerLine": true,
+				"twigPrintWidth": 120,
+				"bracketSpacing": true,
+				"useTabs": true,
+				"tabWidth": 4,
+				"trailingComma": "all"
+			}
+		},
+		{
+			"files": ["**/*.js"],
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2,
+				"trailingComma": "all"
+			}
+		},
+		{
+			"files": ["**/*.scss"],
+			"options": {
+				"useTabs": true,
+				"tabWidth": 4,
+				"trailingComma": "es5"
+			}
+		}
+	]
+}

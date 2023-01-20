@@ -1,0 +1,98 @@
+<section class="sc-general : sc-order" id="order">
+  <div class="sc-wrapper">
+
+    <!-- START OF: ORDER -->
+    <div class="order">
+
+
+      <!-- START OF: ORDER TOP -->
+      <div class="order__top">
+
+        {# <img src="../../assets/images/05_title_desktop.svg" alt="Order title" class="order__title : order__title--desktop" height="100" width="100" />
+        <img src="../../assets/images/05_title_mobile.svg" alt="Order title" class="order__title : order__title--mobile" height="100" width="100" hidden /> #}
+
+        <!-- START OF: Title -->
+        <h2 class="sr-only">{{ order.title }}</h2>
+        <picture>
+          <source media="(min-width: 769px)" srcset="../../assets/images/order/05_title_desktop.svg" />
+          <source media="(max-width: 769px)" srcset="../../assets/images/order/05_title_mobile.svg" />
+          <img class="order__title " src="../../assets/images/order/05_title_mobile.svg" height="90" width="627" alt="{{ order.title }}" />
+        </picture>
+        <!-- END OF: Title -->
+      </div>
+      <!-- END OF: ORDER TOP -->
+
+
+      <!-- START OF: ORDER CONTENT -->
+      <div class="order__content">
+
+
+        <!-- START OF: LEFT COL -->
+        <div class="order__left">
+
+          <!-- START OF: CARD -->
+          <div class="card">
+
+            <img class="card__ribbon" src="../../assets/images/order/05_ribbon_save.svg" alt="Save 12%" height="182" width="180" />
+
+            <!-- START OF: Card Content -->
+            <div class="card__content">
+
+
+              <!-- START OF: Title -->
+              <header class="card__title : title">
+                <h3>{{ order.card_title }}</h3>
+              </header>
+              <!-- END OF: Title -->
+
+
+              <!-- START OF: Main -->
+              <main class="card__main">
+                <ul class="card__list">
+                  {% for list in order.card_list %}
+                    <li class="card__listitem : card__listitem--{{ list.class }}">{{ list.text }}</li>
+                  {% endfor %}
+                </ul>
+              </main>
+              <!-- END OF: Main -->
+
+
+              <!-- START OF: Footer -->
+              <footer class="card__bottom">
+                <div class="card__price">
+                  <div class="card__price--new">{{ order.card_price_old }}</div>
+                  <div class="card__price--old">{{ order.card_price_new }}</div>
+                </div>
+                <div class="card__button">
+                  <a href="{{ cta.href }}" class="btn"><span>{{ cta.text }}</span></a>
+                </div>
+              </footer>
+              <!-- END OF: Footer -->
+
+
+            </div>
+            <!-- END OF: Card Content -->
+
+          </div>
+          <!-- END OF: CARD -->
+
+        </div>
+        <!-- END OF: LEFT COL -->
+
+
+        <!-- START OF: RIGHT COL -->
+        <div class="order__right">
+          <img src="../../assets/images/order/01_advent_box_order.webp" alt="{{ gfx_image_alt }}" class="order__gfx" height="1046" width="1170" />
+        </div>
+        <!-- END OF: RIGHT COL -->
+
+
+      </div>
+      <!-- END OF: ORDER CONTENT -->
+
+
+    </div>
+    <!-- END OF: ORDER -->
+
+  </div>
+</section>

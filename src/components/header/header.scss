@@ -1,0 +1,57 @@
+.site-header {
+	border-bottom: 2px solid #b27e6e;
+	background-color: #222;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-height: 60px;
+	padding-right: 34px;
+	padding-left: 30px;
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+// ##################################################
+
+.site-logo {
+	position: absolute;
+	left: 30px;
+	top: 24px;
+	width: 120px;
+	&__img {
+		height: auto;
+	}
+}
+
+// ##################################################
+
+.site-menu {
+	position: relative;
+	top: 4px;
+
+	// Tablet P and down
+	@media #{$breakpoint-xs-only} {
+		display: none;
+	}
+
+	// ##################################################
+
+	ul {
+		display: flex;
+		gap: 0 46px;
+	}
+
+	// ##################################################
+
+	&__link {
+		color: #ae715e;
+		display: block;
+		margin: 0 16px 0 0;
+		text-shadow: 1px 1px 0 rgba(34, 34, 34, 0.3);
+		font-size: 16px;
+		line-height: 1;
+		text-transform: uppercase;
+		width: 100%;
+	}
+}

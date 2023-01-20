@@ -1,0 +1,56 @@
+// ##################################################
+// Vars
+// ##################################################
+
+:root {
+	--slide-items: 12;
+	--slide-width: 220px;
+	--slide-speed: 48s;
+	--slide-gap: 24px;
+	--slide-duplicates: 2;
+}
+
+// ##################################################
+
+.sc-slider {
+	overflow: hidden;
+	padding-top: 262px;
+	align-items: flex-start;
+}
+
+// ##################################################
+
+.slider {
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	// ##################################################
+
+	&__track {
+		animation: scroll var(--slide-speed) linear infinite;
+		display: flex;
+		width: calc((var(--slide-width) + var(--slide-gap)) * (var(--slide-items) * var(--slide-duplicates)));
+		will-change: transform;
+	}
+
+	&__slide {
+		// height: calc(var(--slide-width) + 24px);
+		width: calc(var(--slide-width) + var(--slide-gap));
+		padding-right: var(--slide-gap);
+	}
+}
+
+// ##################################################
+// Animation
+// ##################################################
+
+@keyframes scroll {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		transform: translate3d(calc((-1 * (var(--slide-width) + var(--slide-gap))) * var(--slide-items)), 0, 0);
+	}
+}

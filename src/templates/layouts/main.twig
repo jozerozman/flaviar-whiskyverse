@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block page_title %}{% endblock %}</title>
+    <meta content="{% block page_description %}{% endblock %}" name="Description" />
+    <meta content="Flaviar" name="application-name" />
+    <meta content="Flaviar" name="author" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    {# START OF: mobile tags for colorizing and styling status bar #}
+    <meta content="#ffffff" name="theme-color" />
+    <meta content="#ffffff" name="msapplication-navbutton-color" />
+    <meta content="#1c1c1c" name="msapplication-TileColor" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="{% block page_title %}{% endblock %}" name="apple-mobile-web-app-capable" />
+
+    {# START OF: social sharing tags #}
+    <meta content="{% block og_image %}{% endblock %}" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="{% block page_title %}{% endblock %}" property="og:title" />
+    <meta content="{% block page_title %}{% endblock %}" property="og:description" />
+    <meta content="" property="og:image" />
+
+    <link rel="stylesheet" type="text/css" href="css/app.css" media="screen" />
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    {% include '../../../src/components/header/header.twig' %}
+
+    <main class="site-main">{% block main %}{% endblock %}</main>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/components.js" defer></script>
+  </body>
+</html>
