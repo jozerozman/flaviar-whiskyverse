@@ -31,7 +31,7 @@
 	top: 4px;
 
 	// Tablet P and down
-	@media #{$breakpoint-xs-only} {
+	@media #{$breakpoint-sm-down} {
 		display: none;
 	}
 

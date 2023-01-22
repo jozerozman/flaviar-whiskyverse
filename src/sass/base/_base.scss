@@ -35,9 +35,6 @@ body {
 	font-family: Nitti;
 	margin: 0 auto;
 	min-width: 320px;
-	overflow-x: hidden;
-
-	padding-bottom: 235px;
 
 	// &.#{$class_open_menu},
 	// &.noscroll {
@@ -50,9 +47,12 @@ body {
 	// }
 }
 
-main {
+.site-main {
 	width: 100%;
 	flex: 1 0 auto;
+	position: relative;
+	padding-bottom: 235px;
+	overflow: hidden;
 }
 
 // Prevents text selection styling
@@ -78,6 +78,10 @@ ol {
 .title-main {
 	* {
 		@extend %inherit_textstyles;
+	}
+
+	strong {
+		font-weight: 700;
 	}
 }
 
@@ -189,13 +193,18 @@ textarea,
 	// ##################################################
 
 	&--top {
-		top: 60px;
+		top: 0;
 	}
 
 	// ##################################################
 
 	&--bottom {
 		bottom: -34px;
+
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
+			bottom: 234px;
+		}
 	}
 }
 
@@ -205,52 +214,89 @@ textarea,
 	position: absolute;
 	height: auto;
 	right: 14.5%;
-	top: 1036px;
+	top: 976px;
 	width: 254px;
+
+	// Tablet P only
+	@media #{$breakpoint-sm-only} {
+		right: -18.1%;
+		top: 1253px;
+		width: 254px;
+	}
 }
 
 .bg-astronaut {
 	position: absolute;
 	height: auto;
 	right: 23.2%;
-	top: 1368px;
+	top: 1308px;
 	width: 238px;
 
 	will-change: transform, opacity;
 	opacity: 0;
 
+	// Tablet P only
+	@media #{$breakpoint-sm-only} {
+		top: 2186px;
+		z-index: 1;
+		width: 340px;
+		right: auto;
+		left: 9.6%;
+	}
+
+	// ##################################################
+	// Animated
+
 	&.is-animated {
-		animation: falling 5s 0s 1;
+		// animation: falling 5s 0s 1;
 		opacity: 1;
 	}
 }
 
 .bg-redplanet {
-	animation: moon-rotate 180s linear infinite;
+	// animation: moon-rotate 180s linear infinite;
 	position: absolute;
 	height: auto;
 	left: -3%;
-	top: 1200px;
+	top: 1140px;
 	width: 521px;
 	will-change: transform;
+
+	// Tablet P and down
+	@media #{$breakpoint-sm-down} {
+		display: none;
+	}
 }
 
 .bg-moon {
-	animation: moon-rotate 360s linear infinite;
+	// animation: moon-rotate 360s linear infinite;
 	position: absolute;
 	height: auto;
 	right: 0;
-	top: 1858px;
+	top: 1798px;
 	width: 772px;
+	max-width: 100%;
 	will-change: transform;
+
+	// Tablet P only
+	@media #{$breakpoint-sm-only} {
+		top: 2272px;
+		width: 212px;
+		right: 17.2%;
+	}
 }
 
 .bg-nose {
 	position: absolute;
 	height: auto;
 	left: 18.4%;
-	top: 1923px;
+	top: 1863px;
 	width: 79px;
+
+	// Tablet P and down
+	@media #{$breakpoint-sm-down} {
+		display: none;
+	}
 }
 
 .bg-star {
@@ -258,15 +304,25 @@ textarea,
 	height: auto;
 	right: 35.4%;
 	width: 128px;
-	top: 2308px;
+	top: 2248px;
+
+	// Tablet P and down
+	@media #{$breakpoint-sm-down} {
+		display: none;
+	}
 }
 
 .bg-square {
 	position: absolute;
 	height: auto;
-	top: 2924px;
+	top: 2864px;
 	left: 14.5%;
 	width: 36px;
+
+	// Tablet P and down
+	@media #{$breakpoint-sm-down} {
+		display: none;
+	}
 }
 
 // ##################################################
@@ -285,12 +341,36 @@ textarea,
 
 	// ##################################################
 
-	&:before {
+	&:before,
+	&:after {
 		@extend %content;
-		background-color: #4fc061;
 		-webkit-filter: blur(4px);
 		filter: blur(4px);
 		z-index: 0;
+		transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	}
+
+	&:before {
+		@extend %content;
+		background-color: var(--flaviar-green);
+	}
+
+	&:after {
+		background-color: var(--flaviar-copper-copper);
+		background: linear-gradient(to bottom, #d6a394 0%, var(--flaviar-copper-copper) 52%, #834a38 100%),
+			linear-gradient(to bottom, var(--flaviar-copper-copper), var(--flaviar-copper-copper));
+		opacity: 0;
+	}
+
+	// Hover effect
+	&:hover,
+	&:focus {
+		&:before {
+			background-color: var(--flaviar-copper-copper);
+		}
+		&:after {
+			opacity: 1;
+		}
 	}
 
 	// ##################################################

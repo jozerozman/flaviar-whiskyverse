@@ -3,6 +3,11 @@
 	flex-flow: column;
 	align-items: center;
 	padding-top: 60px;
+
+	// Tablet P
+	@media #{$breakpoint-sm-only} {
+		padding-top: 64px;
+	}
 }
 
 // ##################################################
@@ -13,23 +18,39 @@
 	// ##################################################
 
 	&__title {
-		margin-bottom: 34px;
 		position: relative;
-		left: 4px;
 		max-width: 683px;
 		width: 100%;
+
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			left: 4px;
+			margin-bottom: 34px;
+		}
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			margin-bottom: 4px;
+		}
 	}
 
 	// ##################################################
 
 	&__gfx {
-		animation: float 6s ease-in-out infinite;
+		// animation: float 6s ease-in-out infinite;
 		max-width: 670px;
 		width: 100%;
 		will-change: transform;
 		position: relative;
 		left: -34px;
 		margin-bottom: -4px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			left: 0;
+			max-width: 360px;
+			margin-bottom: -2px;
+		}
 	}
 
 	// ##################################################
@@ -50,14 +71,24 @@
 		&--first {
 			margin-top: 26px;
 			margin-bottom: 46px;
+
+			// Tablet P
+			@media #{$breakpoint-sm-only} {
+				margin-bottom: 96px;
+			}
 		}
 
 		&--second {
 			margin-top: 156px;
+
+			// Tablet P
+			@media #{$breakpoint-sm-only} {
+				max-width: 90px;
+			}
 		}
 
 		img {
-			animation: cta-arrow 2s ease-in-out infinite;
+			// animation: cta-arrow 2s ease-in-out infinite;
 		}
 	}
 
@@ -65,6 +96,11 @@
 
 	&__icons {
 		max-width: 400px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			max-width: 304px;
+		}
 	}
 
 	// ##################################################
@@ -77,5 +113,10 @@
 		max-width: 596px;
 		padding-top: 40px;
 		margin-bottom: 40px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			max-width: 474px;
+		}
 	}
 }

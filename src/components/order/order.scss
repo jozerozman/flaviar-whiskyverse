@@ -1,8 +1,21 @@
 .sc-order {
 	padding-top: 92px;
 
+	// Tablet P
+	@media #{$breakpoint-sm-only} {
+		padding-top: 54px;
+	}
+
+	// ##################################################
+
 	.sc-wrapper {
-		padding-left: 68px;
+		width: 100%;
+
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			padding-left: 68px;
+			width: auto;
+		}
 	}
 }
 
@@ -12,20 +25,40 @@
 	&__top {
 		margin-bottom: 32px;
 		padding-left: 10px;
+
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
+			padding-left: 11%;
+		}
 	}
 
 	// ##################################################
 
 	&__content {
 		display: flex;
-		// align-items: center;
-		gap: 0 24px;
+
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			gap: 0 24px;
+		}
+
+		// Tablet P and dowm
+		@media #{$breakpoint-sm-down} {
+			flex-flow: column-reverse;
+			align-items: center;
+		}
 	}
 
 	// ##################################################
 
 	&__left {
 		padding-top: 42px;
+
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
+			padding-top: 24px;
+			padding-left: 22px;
+		}
 	}
 
 	&__right {
@@ -39,6 +72,14 @@
 		position: relative;
 		max-width: 584px;
 		width: 100%;
+
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
+			max-width: 380px;
+			top: -5px;
+			left: auto;
+			transform: rotate(5deg);
+		}
 	}
 }
 
@@ -52,12 +93,18 @@
 	display: inline-flex;
 	flex-flow: column;
 	position: relative;
+	overflow: hidden;
 
 	// ##################################################
 
 	&__content {
 		border: 2px solid var(--flaviar-copper-copper-900);
 		padding: 46px 38px 30px 34px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			padding: 46px 17px 30px;
+		}
 
 		&:before {
 			@extend %content;
@@ -75,8 +122,8 @@
 	&__ribbon {
 		pointer-events: none;
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: -1px;
+		right: -1px;
 		width: 90px;
 		z-index: 2;
 	}
@@ -90,11 +137,23 @@
 		line-height: 21px;
 		text-transform: uppercase;
 		margin-bottom: 22px;
+		position: relative;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			left: -4px;
+		}
 	}
 
 	// ##################################################
 
 	&__main {
+		position: relative;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			left: -4px;
+		}
 	}
 
 	// ##################################################
@@ -114,12 +173,21 @@
 		position: relative;
 		padding-left: 20px;
 
+		// Tablet P only
+		@media #{$breakpoint-sm-only} {
+			padding-left: 18px;
+		}
+
 		&:before {
 			@extend %content;
 			background: url() no-repeat scroll left center / contain;
 			width: 15px;
 			height: 15px;
-			top: 0.1em;
+
+			// Tablet L and up
+			@media #{$breakpoint-md-up} {
+				top: 0.1em;
+			}
 		}
 
 		&--green:before {
@@ -142,12 +210,26 @@
 		position: relative;
 		padding-top: 26px;
 
+		// Tablet P only
+		@media #{$breakpoint-sm-only} {
+			padding-top: 27px;
+		}
+
 		&:before {
 			@extend %content;
 			border-top: 1px dashed #af705e;
 			top: 1px;
-			left: -15px;
-			width: calc(100% + 40px);
+
+			// Tablet L and up
+			@media #{$breakpoint-md-up} {
+				left: -15px;
+				width: calc(100% + 40px);
+			}
+
+			// Tablet P only
+			@media #{$breakpoint-sm-only} {
+				width: calc(100% + 6px);
+			}
 		}
 	}
 
@@ -165,22 +247,47 @@
 		position: relative;
 		margin-bottom: 32px;
 
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			margin-bottom: 28px;
+		}
+
 		&:after {
 			@extend %content;
 			background-color: var(--flaviar-copper-copper-900);
 			left: 50%;
 			width: 1px;
-			margin-left: -2px;
-			top: 1px;
+
+			// Tablet L and up
+			@media #{$breakpoint-md-up} {
+				margin-left: -2px;
+				top: 1px;
+			}
+
+			// Tablet P only
+			@media #{$breakpoint-sm-only} {
+				top: 3px;
+			}
 		}
+
+		// ##################################################
 
 		&--new {
 			font-weight: 700;
 			position: relative;
 			left: -5px;
 		}
+
+		// ##################################################
+
 		&--old {
 			position: relative;
+
+			// Tablet P only
+			@media #{$breakpoint-sm-only} {
+				left: 2px;
+			}
+
 			&::before {
 				@extend %content;
 				background: url('../assets/images/order/05_line_red.svg') no-repeat scroll center / 82px auto;
@@ -188,6 +295,12 @@
 				left: -6px;
 				width: 82px;
 				height: 40px;
+
+				// Tablet P only
+				@media #{$breakpoint-sm-only} {
+					top: -3px;
+					left: -5px;
+				}
 			}
 		}
 	}

@@ -1,0 +1,20 @@
+// Gridtext
+.gridtext {
+	display: grid;
+	grid-template-columns: repeat(13, 48px);
+	grid-template-rows: repeat(4, 43px);
+
+	color: var(--color-white);
+	border-top: 2px solid currentColor;
+	border-left: 2px solid currentColor;
+	font-size: 36px;
+	line-height: 44px;
+	font-weight: bold;
+	text-align: center;
+
+	span {
+		color: inherit;
+		border-bottom: 2px solid currentColor;
+		border-right: 2px solid currentColor;
+	}
+}

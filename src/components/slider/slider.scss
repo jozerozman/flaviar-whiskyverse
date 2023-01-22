@@ -16,6 +16,11 @@
 	overflow: hidden;
 	padding-top: 262px;
 	align-items: flex-start;
+
+	// Tablet P
+	@media #{$breakpoint-sm-only} {
+		padding-top: 568px;
+	}
 }
 
 // ##################################################

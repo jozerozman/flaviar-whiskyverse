@@ -1,22 +1,44 @@
 .sc-calendar {
 	padding-top: 128px;
 
-	.sc-wrapper {
-		position: relative;
-		left: -162px;
+	// Tablet P
+	@media #{$breakpoint-sm-only} {
+		padding-top: 88px;
 	}
 
+	// ##################################################
+
+	.sc-wrapper {
+		position: relative;
+		width: 100%;
+
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			left: -162px;
+			width: auto;
+		}
+	}
+
+	// ##################################################
+
 	.sc-content {
-		padding-left: 146px;
+		padding-left: 19%;
 	}
 }
 
 // ##################################################
 
 .calendar {
+	// ##################################################
+
 	&__title {
 		margin-bottom: 48px;
 		max-width: 626px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			margin-bottom: 52px;
+		}
 	}
 
 	&__text {
@@ -25,5 +47,10 @@
 		line-height: 1.75;
 		max-width: 400px;
 		margin-bottom: 32px;
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			max-width: 414px;
+		}
 	}
 }
