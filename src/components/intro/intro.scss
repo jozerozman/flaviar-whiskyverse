@@ -8,6 +8,11 @@
 	@media #{$breakpoint-sm-only} {
 		padding-top: 64px;
 	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		padding-top: 68px;
+	}
 }
 
 // ##################################################
@@ -32,24 +37,37 @@
 		@media #{$breakpoint-sm-only} {
 			margin-bottom: 4px;
 		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			margin-bottom: 44px;
+		}
 	}
 
 	// ##################################################
 
 	&__gfx {
 		// animation: float 6s ease-in-out infinite;
-		max-width: 670px;
+		position: relative;
+		max-width: 360px;
 		width: 100%;
 		will-change: transform;
-		position: relative;
-		left: -34px;
-		margin-bottom: -4px;
+
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			left: -34px;
+			margin-bottom: -4px;
+			max-width: 670px;
+		}
 
 		// Tablet P
 		@media #{$breakpoint-sm-only} {
-			left: 0;
-			max-width: 360px;
 			margin-bottom: -2px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			margin-bottom: 4px;
 		}
 	}
 
@@ -76,6 +94,11 @@
 			@media #{$breakpoint-sm-only} {
 				margin-bottom: 96px;
 			}
+
+			// Mobile
+			@media #{$breakpoint-xs-only} {
+				margin-bottom: 90px;
+			}
 		}
 
 		&--second {
@@ -84,6 +107,11 @@
 			// Tablet P
 			@media #{$breakpoint-sm-only} {
 				max-width: 90px;
+			}
+
+			// Mobile
+			@media #{$breakpoint-xs-only} {
+				margin-top: 76px;
 			}
 		}
 
@@ -95,11 +123,11 @@
 	// ##################################################
 
 	&__icons {
-		max-width: 400px;
+		max-width: 304px;
 
-		// Tablet P
-		@media #{$breakpoint-sm-only} {
-			max-width: 304px;
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			max-width: 400px;
 		}
 	}
 
@@ -117,6 +145,11 @@
 		// Tablet P
 		@media #{$breakpoint-sm-only} {
 			max-width: 474px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			max-width: 304px;
 		}
 	}
 }

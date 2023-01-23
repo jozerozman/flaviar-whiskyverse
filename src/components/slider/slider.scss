@@ -6,8 +6,13 @@
 	--slide-items: 12;
 	--slide-width: 220px;
 	--slide-speed: 48s;
-	--slide-gap: 24px;
+	--slide-gap: 32px;
 	--slide-duplicates: 2;
+
+	// Tablet L and up
+	@media #{$breakpoint-md-up} {
+		--slide-gap: 24px;
+	}
 }
 
 // ##################################################
@@ -20,6 +25,11 @@
 	// Tablet P
 	@media #{$breakpoint-sm-only} {
 		padding-top: 568px;
+	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		padding-top: 506px;
 	}
 }
 

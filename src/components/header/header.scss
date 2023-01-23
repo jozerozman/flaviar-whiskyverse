@@ -10,15 +10,33 @@
 	width: 100%;
 	position: relative;
 	z-index: 2;
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		justify-content: flex-start;
+		padding-left: 20px;
+		min-height: 62px;
+	}
 }
 
 // ##################################################
 
 .site-logo {
-	position: absolute;
-	left: 30px;
-	top: 24px;
-	width: 120px;
+	// Tablet P and up
+	@media #{$breakpoint-sm-up} {
+		position: absolute;
+		left: 30px;
+		top: 24px;
+		width: 120px;
+	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		width: 90px;
+	}
+
+	// ##################################################
+
 	&__img {
 		height: auto;
 	}

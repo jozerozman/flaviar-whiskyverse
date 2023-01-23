@@ -194,6 +194,13 @@ textarea,
 
 	&--top {
 		top: 0;
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			left: 50%;
+			transform: translateX(-50%);
+			width: 204%;
+		}
 	}
 
 	// ##################################################
@@ -204,6 +211,11 @@ textarea,
 		// Tablet P and down
 		@media #{$breakpoint-sm-down} {
 			bottom: 234px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			display: none;
 		}
 	}
 }
@@ -222,6 +234,12 @@ textarea,
 		right: -18.1%;
 		top: 1253px;
 		width: 254px;
+	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		top: 1316px;
+		right: -152px;
 	}
 }
 
@@ -242,6 +260,14 @@ textarea,
 		width: 340px;
 		right: auto;
 		left: 9.6%;
+	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		top: 2222px;
+		width: 340px;
+		right: auto;
+		left: -106px;
 	}
 
 	// ##################################################
@@ -283,6 +309,13 @@ textarea,
 		top: 2272px;
 		width: 212px;
 		right: 17.2%;
+	}
+
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		top: 2278px;
+		width: 212px;
+		right: -80px;
 	}
 }
 

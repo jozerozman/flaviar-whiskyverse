@@ -13,6 +13,17 @@
 	}
 }
 
+@keyframes falling-mobile {
+	from {
+		transform: translate3d(0px, -700px, 0) rotate3d(0, 0, 1, 90deg);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		opacity: 1;
+	}
+}
+
 // ##################################################
 // Floating animation ( advent calendar box )
 // ##################################################

@@ -6,6 +6,11 @@
 		padding-top: 88px;
 	}
 
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		padding-top: 116px;
+	}
+
 	// ##################################################
 
 	.sc-wrapper {
@@ -22,7 +27,21 @@
 	// ##################################################
 
 	.sc-content {
-		padding-left: 19%;
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			padding-left: 146px;
+		}
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
+			padding-left: 19%;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			margin: 0 auto;
+			max-width: 304px;
+		}
 	}
 }
 
@@ -38,6 +57,14 @@
 		// Tablet P
 		@media #{$breakpoint-sm-only} {
 			margin-bottom: 52px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			margin-bottom: 34px;
+			max-width: 468px;
+			position: relative;
+			left: -120px;
 		}
 	}
 

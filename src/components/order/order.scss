@@ -6,6 +6,11 @@
 		padding-top: 54px;
 	}
 
+	// Mobile
+	@media #{$breakpoint-xs-only} {
+		padding-top: 56px;
+	}
+
 	// ##################################################
 
 	.sc-wrapper {
@@ -24,11 +29,20 @@
 .order {
 	&__top {
 		margin-bottom: 32px;
-		padding-left: 10px;
 
-		// Tablet P and down
-		@media #{$breakpoint-sm-down} {
+		// Tablet L and up
+		@media #{$breakpoint-md-up} {
+			padding-left: 10px;
+		}
+
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
 			padding-left: 11%;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			margin-bottom: 42px;
 		}
 	}
 
@@ -54,14 +68,28 @@
 	&__left {
 		padding-top: 42px;
 
-		// Tablet P and down
-		@media #{$breakpoint-sm-down} {
+		// Tablet P
+		@media #{$breakpoint-sm-only} {
 			padding-top: 24px;
 			padding-left: 22px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			padding-top: 92px;
 		}
 	}
 
 	&__right {
+	}
+
+	&__title {
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			max-width: 488px;
+			position: relative;
+			left: -110px;
+		}
 	}
 
 	// ##################################################
@@ -79,6 +107,13 @@
 			top: -5px;
 			left: auto;
 			transform: rotate(5deg);
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			width: auto;
+			max-width: 382px;
+			left: 4px;
 		}
 	}
 }
@@ -101,9 +136,16 @@
 		border: 2px solid var(--flaviar-copper-copper-900);
 		padding: 46px 38px 30px 34px;
 
-		// Tablet P
-		@media #{$breakpoint-sm-only} {
-			padding: 46px 17px 30px;
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
+			padding-left: 17px;
+			padding-right: 17px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			padding-left: 16px;
+			padding-right: 16px;
 		}
 
 		&:before {
@@ -143,6 +185,11 @@
 		@media #{$breakpoint-sm-only} {
 			left: -4px;
 		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			left: -2px;
+		}
 	}
 
 	// ##################################################
@@ -153,6 +200,11 @@
 		// Tablet P
 		@media #{$breakpoint-sm-only} {
 			left: -4px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			left: -2px;
 		}
 	}
 
@@ -173,8 +225,8 @@
 		position: relative;
 		padding-left: 20px;
 
-		// Tablet P only
-		@media #{$breakpoint-sm-only} {
+		// Tablet P and down
+		@media #{$breakpoint-sm-down} {
 			padding-left: 18px;
 		}
 
@@ -187,6 +239,11 @@
 			// Tablet L and up
 			@media #{$breakpoint-md-up} {
 				top: 0.1em;
+			}
+
+			// Mobile
+			@media #{$breakpoint-xs-only} {
+				top: 1px;
 			}
 		}
 
@@ -213,6 +270,11 @@
 		// Tablet P only
 		@media #{$breakpoint-sm-only} {
 			padding-top: 27px;
+		}
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			padding-top: 16px;
 		}
 
 		&:before {
@@ -252,6 +314,12 @@
 			margin-bottom: 28px;
 		}
 
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			padding-top: 26px;
+			margin-bottom: 40px;
+		}
+
 		&:after {
 			@extend %content;
 			background-color: var(--flaviar-copper-copper-900);
@@ -268,6 +336,12 @@
 			@media #{$breakpoint-sm-only} {
 				top: 3px;
 			}
+
+			// Mobile
+			@media #{$breakpoint-xs-only} {
+				top: 14px;
+				margin-left: -3px;
+			}
 		}
 
 		// ##################################################
@@ -276,6 +350,11 @@
 			font-weight: 700;
 			position: relative;
 			left: -5px;
+
+			// Mobile
+			@media #{$breakpoint-xs-only} {
+				left: -7px;
+			}
 		}
 
 		// ##################################################
