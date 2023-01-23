@@ -23,7 +23,8 @@ body {
 	@extend %page_text;
 	color: var(--color-white);
 	background-color: var(--color-black);
-	background: url('../assets/images/bg_elements/00_bck_desktop_static.webp') no-repeat top center / cover;
+	background: var(--color-black) url('../assets/images/bg_elements/00_bck_desktop_static.webp') no-repeat top center /
+		cover;
 	background-attachment: fixed;
 	position: relative;
 	height: auto;
@@ -299,6 +300,11 @@ textarea,
 	&.is-animated {
 		animation: falling 5s 0s 1;
 		opacity: 1;
+
+		// Mobile
+		@media #{$breakpoint-xs-only} {
+			animation: falling-mobile 3s 0s 1;
+		}
 	}
 }
 
