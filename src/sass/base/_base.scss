@@ -22,7 +22,6 @@ body {
 body {
 	@extend %page_text;
 	color: var(--color-white);
-	background-color: var(--color-black);
 	background: var(--color-black) url('../assets/images/bg_elements/00_bck_desktop_static.webp') no-repeat top center /
 		cover;
 	background-attachment: fixed;
@@ -37,15 +36,10 @@ body {
 	margin: 0 auto;
 	min-width: 320px;
 
-	// &.#{$class_open_menu},
-	// &.noscroll {
-	//   overflow: hidden;
-
-	//   // Tablet L and up
-	//   @media #{$breakpoint-md-up} {
-	//     overflow: auto;
-	//   }
-	// }
+	// Tablet P and down
+	@media #{$breakpoint-sm-down} {
+		background-image: url('../assets/images/bg_elements/00_bck_mobile_static.webp');
+	}
 }
 
 .site-main {

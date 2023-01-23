@@ -161,7 +161,7 @@
 
 		&:before {
 			@extend %content;
-			background: url('../assets/images/order/05_card_pattern.svg') no-repeat scroll center / contain;
+			background: url('../assets/images/order/card_pattern.svg') no-repeat scroll center / contain;
 			height: auto;
 			width: calc(100% - 40px);
 			aspect-ratio: 1 / 1;
@@ -259,16 +259,16 @@
 		}
 
 		&--green:before {
-			background-image: url('../assets/images/order/05_icon_green.svg');
+			background-image: url('../assets/images/order/icon_green.svg');
 		}
 		&--yellow:before {
-			background-image: url('../assets/images/order/05_icon_yellow.svg');
+			background-image: url('../assets/images/order/icon_yellow.svg');
 		}
 		&--red:before {
-			background-image: url('../assets/images/order/05_icon_red.svg');
+			background-image: url('../assets/images/order/icon_red.svg');
 		}
 		&--blue:before {
-			background-image: url('../assets/images/order/05_icon_blue.svg');
+			background-image: url('../assets/images/order/icon_blue.svg');
 		}
 	}
 
@@ -380,7 +380,7 @@
 
 			&::before {
 				@extend %content;
-				background: url('../assets/images/order/05_line_red.svg') no-repeat scroll center / 82px auto;
+				background: url('../assets/images/order/price_line_red.svg') no-repeat scroll center / 82px auto;
 				top: -5px;
 				left: -6px;
 				width: 82px;

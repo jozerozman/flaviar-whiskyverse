@@ -1,56 +1,61 @@
 <section class="sc-general : sc-intro">
 
-  {# <img src="./assets/images/intro/01_title_whiskyverse_desktop.svg" alt="Advent box" class="advbox__title : advbox__title--desktop" height="100" width="100" />
-  <img src="./assets/images/intro/01_title_mobile.svg" alt="Advent box" class="advbox__title : advbox__title--mobile" hidden height="100" width="100" /> #}
+
+	<!-- START OF: Title -->
+	<h1 class="sr-only">{{ intro.title }}</h1>
+	<h2 class="sr-only">{{ intro.subtitle }}</h2>
+
+	<picture>
+		<source media="(min-width: 1024px)" srcset="./assets/images/intro/2021_flaviar_advent_calendar_1920.svg" loading="lazy" />
+		<source media="(min-width: 768px) and (max-width: 1024px)" srcset="./assets/images/intro/2021_flaviar_advent_calendar_768.svg" loading="lazy" />
+		<source media="(max-width: 768px)" srcset="./assets/images/intro/2021_flaviar_advent_calendar_375.svg" loading="lazy" />
+		<img class="advbox__title " src="./assets/images/intro/2021_flaviar_advent_calendar_375.svg" height="114" width="684" alt="{{ intro.title }}" loading="lazy" />
+	</picture>
+	<!-- END OF: Title -->
 
 
-  <!-- START OF: Title -->
-  <h1 class="sr-only">{{ intro.title }}</h1>
-  <h2 class="sr-only">{{ intro.subtitle }}</h2>
-  <picture>
-    <source media="(min-width: 1024px)" srcset="./assets/images/intro/01_title_whiskyverse_desktop.svg" />
-    <source media="(min-width: 768px) and (max-width: 1024px)" srcset="./assets/images/intro/01_title_mobile.svg" />
-    <source media="(max-width: 768px)" srcset="./assets/images/intro/2021_flaviar_advent_calendar_375.svg" />
-    <img class="advbox__title " src="./assets/images/intro/2021_flaviar_advent_calendar_375.svg" height="114" width="684" alt="{{ intro.title }}" />
-  </picture>
-  <!-- END OF: Title -->
+	<img
+		alt="{{ intro.gfx_image_alt }}" class="advbox__gfx" height="1200" width="1340"
+		srcset="
+		./assets/images/intro/flaviar_advent_box@1x.webp,
+		./assets/images/intro/flaviar_advent_box@2x.webp 2x,
+		"
+		src="./assets/images/intro/flaviar_advent_box@1x.webp"
+	/>
 
 
-  <img src="./assets/images/intro/01_advent_box.webp" alt="{{ intro.gfx_image_alt }}" class="advbox__gfx" height="1200" width="1340" />
+	<!-- START OF: Text -->
+	<div class="advbox__text : text">
+		<p>{{ intro.text }}</p>
+	</div>
+	<!-- END OF: Text -->
 
 
-  <!-- START OF: Text -->
-  <div class="advbox__text : text">
-    <p>{{ intro.text }}</p>
-  </div>
-  <!-- END OF: Text -->
+	<!-- START OF: CTA -->
+	<a class="advbox__cta : advbox__cta--first" href="{{ cta.href }}">
+		<img src="./assets/images/cta_forward.svg" alt="{{ cta.alt }}" height="51" width="33" loading="lazy" />
+	</a>
+	<!-- END OF: CTA -->
 
 
-  <!-- START OF: CTA -->
-  <a class="advbox__cta : advbox__cta--first" href="{{ cta.href }}">
-    <img src="./assets/images/01_cta_forward.svg" alt="{{ cta.alt }}" height="51" width="33" />
-  </a>
-  <!-- END OF: CTA -->
+	<img src="./assets/images/intro/flaviar_icon_pattern.svg" alt="{{ intro.icons_alt }}" class="advbox__icons" height="31" width="402" loading="lazy" />
 
 
-  <img src="./assets/images/intro/02_icon_pattern.svg" alt="{{ intro.icons_alt }}" class="advbox__icons" height="31" width="402" />
+	<!-- START OF: Text second -->
+	<div class="advbox__text2 : text">
+		<p>{{ intro.text2 }}</p>
+	</div>
+	<!-- END OF: Text second -->
 
 
-  <!-- START OF: Text second -->
-  <div class="advbox__text2 : text">
-    <p>{{ intro.text2 }}</p>
-  </div>
-  <!-- END OF: Text second -->
+	<a href="{{ cta.href }}" class="btn"><span>{{ cta.text }}</span></a>
 
 
-  <a href="{{ cta.href }}" class="btn"><span>{{ cta.text }}</span></a>
-
-
-  <!-- START OF: CTA -->
-  <a class="advbox__cta : advbox__cta--second" href="{{ cta.href }}">
-    <img src="./assets/images/01_cta_forward.svg" alt="{{ cta.alt }}" height="51" width="33" />
-  </a>
-  <!-- END OF: CTA -->
+	<!-- START OF: CTA -->
+	<a class="advbox__cta : advbox__cta--second" href="{{ cta.href }}">
+		<img src="./assets/images/cta_forward.svg" alt="{{ cta.alt }}" height="51" width="33" loading="lazy" />
+	</a>
+	<!-- END OF: CTA -->
 
 
 </section>

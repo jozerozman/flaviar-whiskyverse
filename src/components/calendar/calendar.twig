@@ -1,15 +1,13 @@
 <section class="sc-general : sc-calendar">
   <div class="sc-wrapper">
 
-      {# <img src="./assets/images/calendar/03_title_around_the_desktop.svg" alt="Calendar box" class="calendar__title : calendar__title--desktop" height="100" width="100" />
-      <img src="./assets/images/calendar/03_title_around_the_mobile.svg" alt="Calendar box" class="calendar__title : calendar__title--mobile" hidden height="100" width="100" /> #}
 
       <!-- START OF: Title -->
       <h2 class="sr-only">{{ calendar.title }}</h2>
       <picture>
-        <source media="(min-width: 769px)" srcset="./assets/images/calendar/03_title_around_the_desktop.svg" />
-        <source media="(max-width: 769px)" srcset="./assets/images/calendar/03_title_around_the_mobile.svg" />
-        <img class="calendar__title" src="./assets/images/calendar/03_title_around_the_mobile.svg" height="173" width="627" alt="{{ calendar.title }}" />
+        <source media="(min-width: 769px)" srcset="./assets/images/calendar/around_the_whiskyverse_in_24_days_1920.svg" loading="lazy" />
+        <source media="(max-width: 769px)" srcset="./assets/images/calendar/around_the_whiskyverse_in_24_days_375.svg" loading="lazy" />
+        <img class="calendar__title" src="./assets/images/calendar/around_the_whiskyverse_in_24_days_375.svg" height="173" width="627" alt="{{ calendar.title }}" loading="lazy" />
       </picture>
       <!-- END OF: Title -->
 
