@@ -194,11 +194,16 @@ textarea,
 
 	&--top {
 		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		// Desktop S
+		@media #{$breakpoint-md-only} {
+			width: 133%;
+		}
 
 		// Mobile
 		@media #{$breakpoint-xs-only} {
-			left: 50%;
-			transform: translateX(-50%);
 			width: 204%;
 		}
 	}
@@ -207,6 +212,14 @@ textarea,
 
 	&--bottom {
 		bottom: -34px;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		// Desktop S
+		@media #{$breakpoint-md-only} {
+			bottom: -94px;
+			width: 135%;
+		}
 
 		// Tablet P and down
 		@media #{$breakpoint-sm-down} {
@@ -228,6 +241,11 @@ textarea,
 	right: 14.5%;
 	top: 976px;
 	width: 254px;
+
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		right: 2.6%;
+	}
 
 	// Tablet P only
 	@media #{$breakpoint-sm-only} {
@@ -253,6 +271,11 @@ textarea,
 	will-change: transform, opacity;
 	opacity: 0;
 
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		right: 14.3%;
+	}
+
 	// Tablet P only
 	@media #{$breakpoint-sm-only} {
 		top: 2186px;
@@ -274,19 +297,24 @@ textarea,
 	// Animated
 
 	&.is-animated {
-		// animation: falling 5s 0s 1;
+		animation: falling 5s 0s 1;
 		opacity: 1;
 	}
 }
 
 .bg-redplanet {
-	// animation: moon-rotate 180s linear infinite;
+	animation: moon-rotate 180s linear infinite;
 	position: absolute;
 	height: auto;
 	left: -3%;
 	top: 1140px;
 	width: 521px;
 	will-change: transform;
+
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		left: -20.2%;
+	}
 
 	// Tablet P and down
 	@media #{$breakpoint-sm-down} {
@@ -295,7 +323,7 @@ textarea,
 }
 
 .bg-moon {
-	// animation: moon-rotate 360s linear infinite;
+	animation: moon-rotate 360s linear infinite;
 	position: absolute;
 	height: auto;
 	right: 0;
@@ -303,6 +331,11 @@ textarea,
 	width: 772px;
 	max-width: 100%;
 	will-change: transform;
+
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		right: -16.4%;
+	}
 
 	// Tablet P only
 	@media #{$breakpoint-sm-only} {
@@ -326,6 +359,11 @@ textarea,
 	top: 1863px;
 	width: 79px;
 
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		left: 8%;
+	}
+
 	// Tablet P and down
 	@media #{$breakpoint-sm-down} {
 		display: none;
@@ -339,6 +377,12 @@ textarea,
 	width: 128px;
 	top: 2248px;
 
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		right: 32.1%;
+		top: 2244px;
+	}
+
 	// Tablet P and down
 	@media #{$breakpoint-sm-down} {
 		display: none;
@@ -351,6 +395,12 @@ textarea,
 	top: 2864px;
 	left: 14.5%;
 	width: 36px;
+
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		left: 2.7%;
+		top: 2841px;
+	}
 
 	// Tablet P and down
 	@media #{$breakpoint-sm-down} {

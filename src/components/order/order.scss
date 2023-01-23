@@ -1,6 +1,11 @@
 .sc-order {
 	padding-top: 92px;
 
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		padding-top: 70px;
+	}
+
 	// Tablet P
 	@media #{$breakpoint-sm-only} {
 		padding-top: 54px;
@@ -100,6 +105,12 @@
 		position: relative;
 		max-width: 584px;
 		width: 100%;
+
+		// Desktop S
+		@media #{$breakpoint-md-only} {
+			transform: rotate(-6deg);
+			left: 5px;
+		}
 
 		// Tablet P and down
 		@media #{$breakpoint-sm-down} {

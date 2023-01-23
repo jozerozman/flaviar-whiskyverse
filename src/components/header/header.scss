@@ -11,6 +11,11 @@
 	position: relative;
 	z-index: 2;
 
+	// Desktop S
+	@media #{$breakpoint-md-only} {
+		padding-right: 22px;
+	}
+
 	// Mobile
 	@media #{$breakpoint-xs-only} {
 		justify-content: flex-start;
