@@ -5,8 +5,6 @@ function handleIntersection(entries) {
     if (entry.isIntersecting) {
       console.log('object');
       entry.target.classList.add('is-animated');
-    } else {
-      //   entry.target.classList.remove('is-animated');
     }
   });
 }
